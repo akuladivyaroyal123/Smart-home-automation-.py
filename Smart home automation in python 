@@ -1,0 +1,47 @@
+# Smart Home Automation System in Python
+
+lights = False
+fan = False
+ac = False
+door = False
+
+while True:
+    print("\n===== SMART HOME AUTOMATION =====")
+    print("1. Turn ON/OFF Light")
+    print("2. Turn ON/OFF Fan")
+    print("3. Turn ON/OFF AC")
+    print("4. Open/Close Door")
+    print("5. Show Home Status")
+    print("6. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        lights = not lights
+        print("Light:", "ON" if lights else "OFF")
+
+    elif choice == 2:
+        fan = not fan
+        print("Fan:", "ON" if fan else "OFF")
+
+    elif choice == 3:
+        ac = not ac
+        print("AC:", "ON" if ac else "OFF")
+
+    elif choice == 4:
+        door = not door
+        print("Door:", "OPEN" if door else "CLOSED")
+
+    elif choice == 5:
+        print("\n--- Home Status ---")
+        print("Light :", "ON" if lights else "OFF")
+        print("Fan   :", "ON" if fan else "OFF")
+        print("AC    :", "ON" if ac else "OFF")
+        print("Door  :", "OPEN" if door else "CLOSED")
+
+    elif choice == 6:
+        print("Smart Home System Closed.")
+        break
+
+    else:
+        print("Invalid choice! Please try again.")
